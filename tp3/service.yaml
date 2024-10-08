@@ -8,9 +8,10 @@ metadata:
 spec:
   ports:
     - name: 30008:8080
-    port: 30008
+    port: 8080
     protocol: TCP
     targetPort: 8080
+    nodePort: 30008
   selector:
     app: web
-  type: ClusterIP
+  type: NodePort
