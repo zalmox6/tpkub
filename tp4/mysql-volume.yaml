@@ -9,7 +9,7 @@ spec:
   - image: mysql
     name: mysql-volume
     volumeMounts:
-    - mountPath: /data-volume
+    - mountPath: /var/lib/mysql
       name: data-volume
   volumes:
   - name: data-volume 
@@ -17,11 +17,11 @@ spec:
       path: /data-volume
       type: Directory
   env:
-    - name: bdd
+    - name: MYSQL_DATABASE
       value: eazytraining
-    - name: login
+    - name: MYSQL_USER
       value: eazy
-    - name: password
+    - name: MYSQL_PASSWORD
       value: eazy
-    - name: passroot
+    - name: MYSQL_ROOT_PASSWORD
       value: password

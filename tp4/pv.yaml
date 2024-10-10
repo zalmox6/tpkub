@@ -3,10 +3,9 @@ kinf: PersistentVolume
 metadata:
   name: pv-vol
 spec:
+  storageClassName: manuel
   accessModes:
     - ReadWriteOnce
   capacity:
     storage: 1Gb
-  awsElasticBlockStore:
-    volumeID: 1234
-    fstype: ext4
+  hostpath: "/data-pv"

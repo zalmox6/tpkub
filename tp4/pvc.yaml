@@ -3,8 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: pvc-claim
 spec:
+  storageClassName: manuel # doit correspondre a celui renseigné dans le pv.yaml
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteOnce # doit aussi correspondre à ce qui a été mis dans le pv.yaml
   resources:
     requests:
       storage: 100mo
