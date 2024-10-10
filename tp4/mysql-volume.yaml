@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: tp4
+  name: mysql-volume
+spec:
+  containers:
+  - image: mysql
+    name: mysql-volume
+    volumeMounts:
+    - mountPath: /data-volume
+      name: data-volume
+  volumes:
+  - name: data-volume 
+    hostPath:
+      path: /data-volume
+      type: Directory
+  env:
+    - name: bdd
+      value: eazytraining
+    - name: login
+      value: eazy
+    - name: password
+      value: eazy
+    - name: passroot
+      value: password

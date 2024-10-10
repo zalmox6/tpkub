@@ -1,0 +1,12 @@
+mysql-volume.yaml -> POD mysql-volume -> mysql -> env= bdd:eazytraining; login:eazy; password: eazy; passroot: password
+
+Il doit écrire dans le dossier /data-volume du server
+
+lancer la création du pod
+
+faire le pv.yaml de 1Go en utilisant le dossier local /dataPV
+Faire le pvc.yaml de 100Mo
+
+faire un pod mysql sauf  qu'il devra écrire dans le PVC
+
+
